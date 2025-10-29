@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: local-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: local-app
+  template:
+    metadata:
+      labels:
+        app: local-app
+    spec:
+      containers:
+      - name: local-app
+        image: ghcr.io/chashchinalex/scaletestapp:arm64@sha256:5a98b2d5ecaf1e73ba93a5b127f2f6199a3b0a8c3239f588625cd55fd97f532f
+        resources:
+          limits:
+            memory: "30Mi"
