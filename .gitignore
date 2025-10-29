@@ -1,3 +1,8 @@
+/examples/
+.DS_Store
+.idea/
+*.iml
+*.drawio.xml
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
